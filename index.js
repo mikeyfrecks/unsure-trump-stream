@@ -2,9 +2,9 @@ const https = require('https');
 var Twit = require('twit');
 
 setTimeout(function(){
-  //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
+  https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php?t=daggasdgasdg');
   console.log('pinged');
-}, 1000 * 60 * 2);
+}, 1000 * 60 * 5);
 
 
 var T = new Twit({
