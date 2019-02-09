@@ -20,10 +20,13 @@ var stream = T.stream('statuses/filter',  { follow: "25073877" })
 stream.on('tweet', function (tweet) {
   //CHECK based on object
   if(tweet.in_reply_to_status_id) {
+    console.log('blocked reply');
     return;
+
   }
   if(tweet.retweeted_status) {
     return;
+
   }
   var text = (tweet.truncated) ? tweet.extended_tweet.full_text : tweet.text;
   var t_exploded = text.split(" ");
@@ -37,6 +40,7 @@ stream.on('tweet', function (tweet) {
   var exclaimed = false;
   var tweetString = "";
   t_exploded.forEach(function(e,i){
+    console.log(e);
     if(e.indexOf("!") > -1 && e.indexOf('http') < 0) {
       exclaimed = true;
     }
