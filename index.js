@@ -15,7 +15,7 @@ var T = new Twit({
 });
 
 
-var stream = T.stream('statuses/filter',  { follow: "1093963120412971009" })
+var stream = T.stream('statuses/filter',  { follow: "25073877" })
 
 stream.on('tweet', function (tweet) {
   //CHECK based on object
