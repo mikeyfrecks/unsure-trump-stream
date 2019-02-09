@@ -3,7 +3,7 @@ var Twit = require('twit');
 
 setTimeout(function(){
 //  https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php?t=daggasdgasdg');
-  console.log('pinged');
+  //console.log('pinged');
 }, 1000 * 60 * 5);
 
 
