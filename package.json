@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mikeyfrecks/unsure-trump-stream/issues"
   },
+  "dependencies": {
+    "twit": "^2.2.9"
+  },
   "homepage": "https://github.com/mikeyfrecks/unsure-trump-stream#readme"
 }
