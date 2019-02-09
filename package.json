@@ -1,0 +1,19 @@
+{
+  "name": "unsure-trump-stream",
+  "version": "1.0.0",
+  "description": "Trump Troll Stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeyfrecks/unsure-trump-stream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeyfrecks/unsure-trump-stream/issues"
+  },
+  "homepage": "https://github.com/mikeyfrecks/unsure-trump-stream#readme"
+}
