@@ -15,7 +15,7 @@ var T = new Twit({
 });
 
 
-var stream = T.stream('statuses/filter', { track: 'mango' })
+var stream = T.stream('statuses/filter',  { follow: "1093963120412971009" })
 
 stream.on('tweet', function (tweet) {
   console.log(tweet);
