@@ -14,11 +14,17 @@ var T = new Twit({
   access_token_secret: process.env.access_token_secret
 });
 
+var trump_id = "25073877"
 
-var stream = T.stream('statuses/filter',  { follow: "25073877" })
+var stream = T.stream('statuses/filter',  { follow: trump_id})
 
 stream.on('tweet', function (tweet) {
   //CHECK based on object
+
+  if(tweet.user.id_str !== trump_id) {
+    console.log('not trump');
+    return ;
+  }
   if(tweet.in_reply_to_status_id) {
     console.log('blocked reply');
     return;
@@ -50,6 +56,7 @@ stream.on('tweet', function (tweet) {
   if(!exclaimed) {
     return;
   }
+  console.log(tweetString);
   //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php?t='+encodeURIComponent(tweetString));
   //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
 });
