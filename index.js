@@ -18,5 +18,6 @@ var T = new Twit({
 var stream = T.stream('statuses/filter', { track: 'mango' })
 
 stream.on('tweet', function (tweet) {
+  console.log(tweet);
   https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
 });
