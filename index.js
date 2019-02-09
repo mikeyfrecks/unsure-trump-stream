@@ -58,9 +58,9 @@ stream.on('tweet', function (tweet) {
   }
   console.log(tweetString);
   https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php?t='+encodeURIComponent(tweetString));
-  T.post('statuses/update', { status: tweetString }, function(err, data, response) {
+  /*T.post('statuses/update', { status: tweetString }, function(err, data, response) {
     console.log(data)
-  });
+  });*/
 
   //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
 });
