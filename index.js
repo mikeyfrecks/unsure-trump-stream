@@ -18,6 +18,6 @@ var T = new Twit({
 var stream = T.stream('statuses/filter',  { follow: "1093963120412971009" })
 
 stream.on('tweet', function (tweet) {
-  console.log(tweet);
-  https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
+  console.log(tweet.text);
+  //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
 });
