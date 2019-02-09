@@ -50,7 +50,7 @@ stream.on('tweet', function (tweet) {
     if(e.indexOf("!") > -1 && e.indexOf('http') < 0) {
       exclaimed = true;
     }
-    tweetString += e.replace(/!/g, '?');
+    tweetString += e.replace(/!/g, '?')+" ";
   });
   tweetString = tweetString.replace(/&amp;/g,"&");
   if(!exclaimed) {
