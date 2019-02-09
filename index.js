@@ -57,6 +57,6 @@ stream.on('tweet', function (tweet) {
     return;
   }
   console.log(tweetString);
-  //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php?t='+encodeURIComponent(tweetString));
+  https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php?t='+encodeURIComponent(tweetString));
   //https.get('https://www.becreativeeveryday.com/unsuretrump/node_test.php');
 });
