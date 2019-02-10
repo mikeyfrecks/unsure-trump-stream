@@ -13,8 +13,8 @@ var T = new Twit({
   access_token: process.env.access_token,
   access_token_secret: process.env.access_token_secret
 });
-
-var trump_id = "25073877"
+//"25073877";
+var trump_id = "1093963120412971009"
 
 var stream = T.stream('statuses/filter',  { follow: trump_id})
 
@@ -35,6 +35,7 @@ stream.on('tweet', function (tweet) {
 
   }
   var text = (tweet.truncated) ? tweet.extended_tweet.full_text : tweet.text;
+  console.log(tweet);
   var t_exploded = text.split(" ");
   //MANUAL RETWEET
   if(t_exploded[0] === "RT") {
