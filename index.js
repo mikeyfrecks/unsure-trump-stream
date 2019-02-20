@@ -14,16 +14,13 @@ var T = new Twit({
   access_token_secret: process.env.access_token_secret
 });
 //"25073877";
-var trump_id = "1093963120412971009"
+var trump_id = "25073877"
 
 var stream = T.stream('statuses/filter',  { follow: trump_id})
 
 stream.on('tweet', function (tweet) {
   //CHECK based on object
-  console.log('tweet');
-  console.log(tweet);
 
-  return false;
 
   if(tweet.user.id_str !== trump_id) {
     console.log('not trump');
@@ -60,6 +57,12 @@ stream.on('tweet', function (tweet) {
   tweetString = tweetString.replace(/&amp;/g,"&");
   if(!exclaimed) {
     return;
+  }
+  if(tweet.is_quote_status) {
+    var url = tweet.quoted_status_permalink.url;
+    if(tweetString.indexOf(url) === -1) {
+      tweetString += " "+url;
+    }
   }
   console.log(tweetString);
   https.get(process.env.test_string + encodeURIComponent(tweetString));
