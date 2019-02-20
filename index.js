@@ -6,7 +6,7 @@ setTimeout(function(){
   //console.log('pinged');
 }, 1000 * 60 * 5);
 
-
+console.log('up');
 var T = new Twit({
   consumer_key: process.env.consumer_key,
   consumer_secret: process.env.consumer_secret,
