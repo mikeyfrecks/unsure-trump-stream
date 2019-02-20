@@ -14,12 +14,13 @@ var T = new Twit({
   access_token_secret: process.env.access_token_secret
 });
 //"25073877";
-var trump_id = "25073877"
+var trump_id = "1093963120412971009"
 
 var stream = T.stream('statuses/filter',  { follow: trump_id})
 
 stream.on('tweet', function (tweet) {
   //CHECK based on object
+  console.log(tweet);
 
   if(tweet.user.id_str !== trump_id) {
     console.log('not trump');
