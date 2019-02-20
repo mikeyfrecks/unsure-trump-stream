@@ -22,6 +22,8 @@ stream.on('tweet', function (tweet) {
   //CHECK based on object
   console.log(tweet);
 
+  return false;
+
   if(tweet.user.id_str !== trump_id) {
     console.log('not trump');
     return ;
