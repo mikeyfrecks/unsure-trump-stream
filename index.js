@@ -20,6 +20,7 @@ var stream = T.stream('statuses/filter',  { follow: trump_id})
 
 stream.on('tweet', function (tweet) {
   //CHECK based on object
+  console.log('tweet');
   console.log(tweet);
 
   return false;
