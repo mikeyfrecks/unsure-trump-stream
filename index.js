@@ -65,10 +65,14 @@ stream.on('tweet', function (tweet) {
     }
   }
   console.log(tweetString);
-  https.get(process.env.test_string + encodeURIComponent(tweetString));
+  
   T.post('statuses/update', { status: tweetString }, function(err, data, response) {
     console.log(data)
   });
+  
+  if(process.env.test_string) {
+	  https.get(process.env.test_string + encodeURIComponent(tweetString));
+  }
 
 
 });
