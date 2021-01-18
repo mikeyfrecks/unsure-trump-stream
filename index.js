@@ -3,7 +3,7 @@ var Twit = require('twit');
 
 setTimeout(function(){
 
-  //console.log('pinged');
+  console.log("ping");
 }, 1000 * 60 * 5);
 
 console.log('up');
